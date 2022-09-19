@@ -14,6 +14,8 @@
     "@angular/router": "~14.2.0",
     "@nativescript/angular": "~14.2.0",
     "@nativescript/core": "~8.3.0",
+    "@nativescript/mlkit-barcode-scanning": "^1.0.5",
+    "@nativescript/mlkit-core": "^1.0.5",
     "@nativescript/theme": "~3.0.2",
     "rxjs": "~7.5.0",
     "zone.js": "~0.11.5"
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~14.2.0",
     "@angular/compiler-cli": "~14.2.0",
+    "@nativescript/android": "8.3.1",
     "@nativescript/types": "~8.3.0",
     "@nativescript/webpack": "~5.0.6",
     "@ngtools/webpack": "~14.2.0",

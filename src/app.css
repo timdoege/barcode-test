@@ -4,3 +4,9 @@
 Button.-primary {
   font-size: 18;
 }
+
+.scanner-round {
+  border-radius: 2;
+  border-width: 8;
+  border-color: #ddd;
+}

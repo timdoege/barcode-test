@@ -9,9 +9,11 @@ android {
   // ndkVersion ""
 
   defaultConfig {
-    minSdkVersion 17
+    minSdkVersion 23
+    targetSdkVersion 30
+    compileSdkVersion 31
     // targetSdkVersion 32
-
+    multiDexEnabled true
     // Version Information
     versionCode 1
     versionName "1.0.0"
