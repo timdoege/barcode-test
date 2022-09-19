@@ -29,7 +29,9 @@ export class ItemsComponent implements OnInit {
   public onMlKitLoaded(args) {
     this.camera = args.object;
     if (this.camera) {
-      this.camera.requestCameraPermission();
+      if (!this.camera.hasCameraPermission()) {
+        this.camera.requestCameraPermission();
+      }
       this.camera.pause = false;
       this.camera.torchOn = false;
     }
