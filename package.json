@@ -12,6 +12,7 @@
     "@angular/platform-browser": "~14.2.0",
     "@angular/platform-browser-dynamic": "~14.2.0",
     "@angular/router": "~14.2.0",
+    "@nativescript-community/ui-barcodeview": "^3.5.5",
     "@nativescript/angular": "~14.2.0",
     "@nativescript/core": "~8.3.0",
     "@nativescript/mlkit-barcode-scanning": "^1.0.5",

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { MLKitView, DetectionType, DetectionEvent } from '@nativescript/mlkit-core';
 import { BarcodeFormats, BarcodeResult } from '@nativescript/mlkit-barcode-scanning';
 import { RouterExtensions } from '@nativescript/angular';
+import { ScanResult } from '@nativescript-community/ui-barcodeview';
 
 
 @Component({
@@ -34,6 +35,9 @@ export class ItemsComponent implements OnInit {
     }
   }
 
+  onBarcodePluginStoreCodeScanResult(result: ScanResult): void {
+    console.log(result.text);
+  }
 
   public onMlKitDetection(event: DetectionEvent) {
     if (event.type === DetectionType.Barcode) {
@@ -51,4 +55,8 @@ export class ItemsComponent implements OnInit {
   public onNavigateTap() {
     this.routerExtension.navigate(['/item', '1']);
   }
+  public onNavigateAndClearTap() {
+    this.routerExtension.navigate(['/item', '1'], { clearHistory: true });
+  }
+
 }

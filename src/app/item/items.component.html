@@ -1,8 +1,10 @@
 <ActionBar title="My App"> </ActionBar>
 
-<GridLayout rows="*,auto">
-  <MLKitView #scannerView [torchOn]="torchOn" [pause]="pauseScanning" height="300" width="300" class="scanner-round" (loaded)="onMlKitLoaded($event)" cameraPosition="back"
-    [detectionType]="detectorType" [barcodeFormats]="barcodeFormats" (detection)="onMlKitDetection($event)">
-  </MLKitView>
+<GridLayout rows="*,auto,auto">
+  <BarcodeView #scannerView class="scanner-round" width="300" height="300" formats="QR_CODE" beepOnScan="false"
+    reportDuplicates="true" preferFrontCamera="false" [pause]="pauseScanning"
+    (scanResult)="onBarcodePluginStoreCodeScanResult($event)">
+  </BarcodeView>
   <Button row="1" class="m-20 -primary" text="Navigate" (tap)="onNavigateTap()"></Button>
+  <Button row="2" class="m-20 -primary" text="Navigate and clear" (tap)="onNavigateAndClearTap()"></Button>
 </GridLayout>
